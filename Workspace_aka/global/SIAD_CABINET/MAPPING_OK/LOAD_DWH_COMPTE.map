@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map:map xmlns:map="http://www.indy.com/v2/map" id="_zVoqcMO1Ee-HALqHB_QHoA" internalVersion="8" tech="resource.tech#_waYSMH8VEd2__Mzb_dB76A?fileId=_waYSMH8VEd2__Mzb_dB76A$type=tech$name=flow?">
+  <datastore id="_z8ZIcMO1Ee-HALqHB_QHoA" alias="SAS_COMPTE" dataset="_z8ufoMO1Ee-HALqHB_QHoA" ref="resource.md#_hinx4LfJEe-iaoMtKSubDA?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=SAS_COMPTE?">
+    <field id="_z8sqcMO1Ee-HALqHB_QHoA" name="DATE_CREATION" ref="resource.md#_hinyAbfJEe-iaoMtKSubDA?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=DATE_CREATION?"/>
+    <field id="_z8sDY8O1Ee-HALqHB_QHoA" fullAlias="CABINET" name="CABINET" ref="resource.md#_hinx-7fJEe-iaoMtKSubDA?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=CABINET?"/>
+    <field id="_z8sDYcO1Ee-HALqHB_QHoA" fullAlias="STATUS" name="STATUS" ref="resource.md#_hinx77fJEe-iaoMtKSubDA?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=STATUS?"/>
+    <field id="_z8sDYMO1Ee-HALqHB_QHoA" name="ACTION" ref="resource.md#_hinx6bfJEe-iaoMtKSubDA?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=ACTION?"/>
+    <field id="_z8sDYsO1Ee-HALqHB_QHoA" fullAlias="TYPE" name="TYPE" ref="resource.md#_hinx9bfJEe-iaoMtKSubDA?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=TYPE?"/>
+    <field id="_z8rcUcO1Ee-HALqHB_QHoA" fullAlias="CLE_COMPTE" name="CLE_COMPTE" ref="resource.md#_hinx47fJEe-iaoMtKSubDA?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=CLE_COMPTE?"/>
+    <field id="_z8sqccO1Ee-HALqHB_QHoA" fullAlias="ID_FICHIER" name="ID_FICHIER" ref="resource.md#_hinyB7fJEe-iaoMtKSubDA?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=ID_FICHIER?"/>
+  </datastore>
+  <datastore id="_v-34EMO3Ee-HALqHB_QHoA" alias="TRANSCO_TYPE" dataset="_z8ufoMO1Ee-HALqHB_QHoA" ref="resource.md#_hinxtrfJEe-iaoMtKSubDA?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=TRANSCO?">
+    <field id="_v-_M0cO3Ee-HALqHB_QHoA" fullAlias="TARGET_VALUE" name="TARGET_VALUE" ref="resource.md#_hinxxbfJEe-iaoMtKSubDA?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=TARGET_VALUE?"/>
+    <field id="_v-_M0MO3Ee-HALqHB_QHoA" fullAlias="SOURCE_CODE" name="SOURCE_CODE" ref="resource.md#_hinxv7fJEe-iaoMtKSubDA?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=SOURCE_CODE?"/>
+    <field id="_v-_z4MO3Ee-HALqHB_QHoA" name="DESCRIPTION" ref="resource.md#_hinxy7fJEe-iaoMtKSubDA?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=DESCRIPTION?"/>
+    <field id="_v--lwcO3Ee-HALqHB_QHoA" fullAlias="CONTEXTE" name="CONTEXTE" ref="resource.md#_hinxubfJEe-iaoMtKSubDA?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=CONTEXTE?"/>
+  </datastore>
+  <datastore id="_yXEegMO3Ee-HALqHB_QHoA" alias="TRANSCO_CABINET" dataset="_z8ufoMO1Ee-HALqHB_QHoA" ref="resource.md#_hinxtrfJEe-iaoMtKSubDA?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=TRANSCO?">
+    <field id="_yXFsosO3Ee-HALqHB_QHoA" fullAlias="TARGET_VALUE" name="TARGET_VALUE" ref="resource.md#_hinxxbfJEe-iaoMtKSubDA?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=TARGET_VALUE?"/>
+    <field id="_yXFsocO3Ee-HALqHB_QHoA" fullAlias="SOURCE_CODE" name="SOURCE_CODE" ref="resource.md#_hinxv7fJEe-iaoMtKSubDA?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=SOURCE_CODE?"/>
+    <field id="_yXFso8O3Ee-HALqHB_QHoA" name="DESCRIPTION" ref="resource.md#_hinxy7fJEe-iaoMtKSubDA?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=DESCRIPTION?"/>
+    <field id="_yXFsoMO3Ee-HALqHB_QHoA" fullAlias="CONTEXTE" name="CONTEXTE" ref="resource.md#_hinxubfJEe-iaoMtKSubDA?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=CONTEXTE?"/>
+  </datastore>
+  <datastore id="_mPm2EMO6Ee-HALqHB_QHoA" alias="DWH_COMPTE" control="true" dataset="_mPsVoMO6Ee-HALqHB_QHoA" ref="resource.md#_Y1lzEsR8Ee-LvsLQvAjjow?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=DWH_COMPTE?" subExpression="[A]" useCDC="false">
+    <field id="_mPqgccO6Ee-HALqHB_QHoA" name="ID_COMPTE" ref="resource.md#_Y1lzFcR8Ee-LvsLQvAjjow?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=ID_COMPTE?" updateKey="false">
+      <expression id="_m71C4MO6Ee-HALqHB_QHoA" setDescriptorRef="_m70b0MO6Ee-HALqHB_QHoA">
+        <expression></expression>
+      </expression>
+    </field>
+    <field id="_mPrHhMO6Ee-HALqHB_QHoA" enable="true" insert="true" name="DATE_CREATION" ref="resource.md#_Y1mZ9sR8Ee-LvsLQvAjjow?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=DATE_CREATION?" update="true">
+      <expression id="_m71p8MO6Ee-HALqHB_QHoA" location="TRG" setDescriptorRef="_m70b0MO6Ee-HALqHB_QHoA">
+        <expression>Current_timestamp</expression>
+      </expression>
+    </field>
+    <field id="_mPrHgMO6Ee-HALqHB_QHoA" enable="true" insert="true" name="CLE_COMPTE" ref="resource.md#_Y1lzGsR8Ee-LvsLQvAjjow?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=CLE_COMPTE?" update="true" updateKey="true">
+      <expression id="_m71p8cO6Ee-HALqHB_QHoA" setDescriptorRef="_m70b0MO6Ee-HALqHB_QHoA">
+        <expression>SAS_COMPTE.CLE_COMPTE</expression>
+      </expression>
+    </field>
+    <field id="_mPrHg8O6Ee-HALqHB_QHoA" enable="true" insert="true" name="CABINET" ref="resource.md#_Y1mZ8MR8Ee-LvsLQvAjjow?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=CABINET?" update="true">
+      <expression id="_m71p8sO6Ee-HALqHB_QHoA" setDescriptorRef="_m70b0MO6Ee-HALqHB_QHoA">
+        <expression>TRANSCO_CABINET.TARGET_VALUE</expression>
+      </expression>
+    </field>
+    <field id="_mPrHgcO6Ee-HALqHB_QHoA" enable="true" insert="true" name="STATUS" ref="resource.md#_Y1mZ5MR8Ee-LvsLQvAjjow?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=STATUS?" update="true">
+      <expression id="_m72RAMO6Ee-HALqHB_QHoA" setDescriptorRef="_m70b0MO6Ee-HALqHB_QHoA">
+        <expression>SAS_COMPTE.STATUS</expression>
+      </expression>
+    </field>
+    <field id="_mPrHgsO6Ee-HALqHB_QHoA" enable="true" insert="true" name="TYPE" ref="resource.md#_Y1mZ6sR8Ee-LvsLQvAjjow?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=TYPE?" update="true">
+      <expression id="_m72RAcO6Ee-HALqHB_QHoA" setDescriptorRef="_m70b0MO6Ee-HALqHB_QHoA">
+        <expression>TRANSCO_TYPE.TARGET_VALUE</expression>
+      </expression>
+    </field>
+    <field id="_mPrHhcO6Ee-HALqHB_QHoA" enable="true" insert="true" name="ID_FICHIER" ref="resource.md#_Y1mZ_cR8Ee-LvsLQvAjjow?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=ID_FICHIER?" update="true">
+      <expression id="_m72RAsO6Ee-HALqHB_QHoA" setDescriptorRef="_m70b0MO6Ee-HALqHB_QHoA">
+        <expression>SAS_COMPTE.ID_FICHIER</expression>
+      </expression>
+    </field>
+    <constraint id="_mPrHhsO6Ee-HALqHB_QHoA" name="DWH_COMPTE" ref="resource.md#_Y1maA8R8Ee-LvsLQvAjjow?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=DWH_COMPTE?" reject="true"/>
+    <constraint id="_vrQjAMR8Ee-LvsLQvAjjow" name="CK_CLE_COMPTE" ref="resource.md#_qUpqscR8Ee-LvsLQvAjjow?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=CK_CLE_COMPTE?" reject="true"/>
+    <constraint id="_JJRo18YaEe-8earIxX1aJA" name="CK_CABINET" ref="resource.md#_iDJZkcVjEe-8earIxX1aJA?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=CK_CABINET?" reject="true"/>
+    <constraint id="_JJRo2MYaEe-8earIxX1aJA" name="Controle_TYPE" ref="resource.md#_esIBIcVoEe-8earIxX1aJA?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=Controle_TYPE?" reject="true"/>
+    <setDescriptor id="_m70b0MO6Ee-HALqHB_QHoA" label="A"/>
+  </datastore>
+  <join id="_0i7SEMO3Ee-HALqHB_QHoA" location="SRC" joinType="Right_Join" left="_yXEegMO3Ee-HALqHB_QHoA" order="10" right="_z8ZIcMO1Ee-HALqHB_QHoA">
+    <expression><![CDATA[TRANSCO_CABINET.SOURCE_CODE = SAS_COMPTE.CABINET
+AND TRANSCO_CABINET.CONTEXTE = 'COMPTE.CABINET']]></expression>
+  </join>
+  <join id="_1VohYMO3Ee-HALqHB_QHoA" location="SRC" joinType="Right_Join" left="_v-34EMO3Ee-HALqHB_QHoA" order="30" right="_z8ZIcMO1Ee-HALqHB_QHoA">
+    <expression><![CDATA[TRANSCO_TYPE.SOURCE_CODE = SAS_COMPTE.TYPE
+AND TRANSCO_TYPE.CONTEXTE = 'COMPTE.TYPE']]></expression>
+  </join>
+  <template id="_eH8dQMR8Ee-LvsLQvAjjow" name="I_DWH_COMPTE" process="resource.proc#_jkWgEFEJEeO7Vo9WeM2sCg?fileId=_jkWgEFEJEeO7Vo9WeM2sCg$type=proc$name=INTEGRATION%20Oracle?" targetId="_mPm2EMO6Ee-HALqHB_QHoA"/>
+  <template id="_fpB1gMR8Ee-LvsLQvAjjow" name="R_DWH_COMPTE" process="resource.proc#_cvMAIERgEd22W6kpnG-bRg?fileId=_cvMAIERgEd22W6kpnG-bRg$type=proc$name=REJECT%20Oracle?" targetId="_mPm2EMO6Ee-HALqHB_QHoA">
+    <parameter id="_zNuHsMR9Ee-LvsLQvAjjow" name="deletePreviousRejects" value="false"/>
+  </template>
+  <dataSet id="_z8ufoMO1Ee-HALqHB_QHoA">
+    <container>_z8ZIcMO1Ee-HALqHB_QHoA</container>
+    <container>_yXEegMO3Ee-HALqHB_QHoA</container>
+    <container>_v-34EMO3Ee-HALqHB_QHoA</container>
+  </dataSet>
+  <dataSet id="_mPsVoMO6Ee-HALqHB_QHoA">
+    <container>_mPm2EMO6Ee-HALqHB_QHoA</container>
+  </dataSet>
+  <hint>
+    <usedField>#_z8sDY8O1Ee-HALqHB_QHoA</usedField>
+    <usedField>#_z8sDYcO1Ee-HALqHB_QHoA</usedField>
+    <usedField>#_z8sDYsO1Ee-HALqHB_QHoA</usedField>
+    <usedField>#_z8rcUcO1Ee-HALqHB_QHoA</usedField>
+    <usedField>#_z8sqccO1Ee-HALqHB_QHoA</usedField>
+    <usedField>#_v-_M0cO3Ee-HALqHB_QHoA</usedField>
+    <usedField>#_v-_M0MO3Ee-HALqHB_QHoA</usedField>
+    <usedField>#_v--lwcO3Ee-HALqHB_QHoA</usedField>
+    <usedField>#_yXFsosO3Ee-HALqHB_QHoA</usedField>
+    <usedField>#_yXFsocO3Ee-HALqHB_QHoA</usedField>
+    <usedField>#_yXFsoMO3Ee-HALqHB_QHoA</usedField>
+  </hint>
+  <diagram><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:map="http://www.indy.com/v2/map" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xsi:schemaLocation="http://www.eclipse.org/gmf/runtime/1.0.1/notation " xmi:id="_zYKaAMO1Ee-HALqHB_QHoA" type="Map" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_z8yxEMO1Ee-HALqHB_QHoA" type="2004" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_z8yxEsO1Ee-HALqHB_QHoA" type="5005"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_z8yxE8O1Ee-HALqHB_QHoA" type="5007"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_z8yxFMO1Ee-HALqHB_QHoA" type="7003"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_z8yxFcO1Ee-HALqHB_QHoA" type="7009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_z8yxFsO1Ee-HALqHB_QHoA" type="7004">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_z8yxF8O1Ee-HALqHB_QHoA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_z8yxGMO1Ee-HALqHB_QHoA"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_z8yxGcO1Ee-HALqHB_QHoA" type="5009">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_z8yxGsO1Ee-HALqHB_QHoA"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_z8yxG8O1Ee-HALqHB_QHoA" type="7005">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_z8yxHMO1Ee-HALqHB_QHoA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_z8yxHcO1Ee-HALqHB_QHoA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_z8yxHsO1Ee-HALqHB_QHoA" type="7007"/>
+    <element xmi:type="map:Datastore" href="resource.map#_z8ZIcMO1Ee-HALqHB_QHoA?fileId=_zVoqcMO1Ee-HALqHB_QHoA$type=map?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_z8yxEcO1Ee-HALqHB_QHoA" x="107" y="175"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_v_ZcgMO3Ee-HALqHB_QHoA" type="2004" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_v_aDkMO3Ee-HALqHB_QHoA" type="5005"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_v_aDkcO3Ee-HALqHB_QHoA" type="5007"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_v_aDksO3Ee-HALqHB_QHoA" type="7003"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_v_aDk8O3Ee-HALqHB_QHoA" type="7009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_v_aDlMO3Ee-HALqHB_QHoA" type="7004">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_v_aDlcO3Ee-HALqHB_QHoA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_v_aDlsO3Ee-HALqHB_QHoA"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_v_aDl8O3Ee-HALqHB_QHoA" type="5009">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_v_aDmMO3Ee-HALqHB_QHoA"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_v_aDmcO3Ee-HALqHB_QHoA" type="7005">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_v_aDmsO3Ee-HALqHB_QHoA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_v_aDm8O3Ee-HALqHB_QHoA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_v_aDnMO3Ee-HALqHB_QHoA" type="7007"/>
+    <element xmi:type="map:Datastore" href="resource.map#_v-34EMO3Ee-HALqHB_QHoA?fileId=_zVoqcMO1Ee-HALqHB_QHoA$type=map?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v_ZcgcO3Ee-HALqHB_QHoA" x="391" y="95"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_yXc5AMO3Ee-HALqHB_QHoA" type="2004" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_yXc5AsO3Ee-HALqHB_QHoA" type="5005"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_yXc5A8O3Ee-HALqHB_QHoA" type="5007"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_yXdgEMO3Ee-HALqHB_QHoA" type="7003"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_yXdgEcO3Ee-HALqHB_QHoA" type="7009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_yXdgEsO3Ee-HALqHB_QHoA" type="7004">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_yXdgE8O3Ee-HALqHB_QHoA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_yXdgFMO3Ee-HALqHB_QHoA"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_yXdgFcO3Ee-HALqHB_QHoA" type="5009">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_yXdgFsO3Ee-HALqHB_QHoA"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_yXdgF8O3Ee-HALqHB_QHoA" type="7005">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_yXdgGMO3Ee-HALqHB_QHoA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_yXdgGcO3Ee-HALqHB_QHoA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_yXdgGsO3Ee-HALqHB_QHoA" type="7007"/>
+    <element xmi:type="map:Datastore" href="resource.map#_yXEegMO3Ee-HALqHB_QHoA?fileId=_zVoqcMO1Ee-HALqHB_QHoA$type=map?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yXc5AcO3Ee-HALqHB_QHoA" x="365" y="385"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_0jocsMO3Ee-HALqHB_QHoA" type="2005">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_0jocscO3Ee-HALqHB_QHoA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_0jocssO3Ee-HALqHB_QHoA" fontName="Segoe UI"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_0jocs8O3Ee-HALqHB_QHoA"/>
+    <element xmi:type="map:Join" href="resource.map#_0i7SEMO3Ee-HALqHB_QHoA?fileId=_zVoqcMO1Ee-HALqHB_QHoA$type=map?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0joctMO3Ee-HALqHB_QHoA" x="327" y="352"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_1WNJIMO3Ee-HALqHB_QHoA" type="2005">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_1WNJIcO3Ee-HALqHB_QHoA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_1WNJIsO3Ee-HALqHB_QHoA" fontName="Segoe UI"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_1WNJI8O3Ee-HALqHB_QHoA"/>
+    <element xmi:type="map:Join" href="resource.map#_1VohYMO3Ee-HALqHB_QHoA?fileId=_zVoqcMO1Ee-HALqHB_QHoA$type=map?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1WNJJMO3Ee-HALqHB_QHoA" x="350" y="189"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_mQAesMO6Ee-HALqHB_QHoA" type="2004" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_mQBFwMO6Ee-HALqHB_QHoA" type="5005"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_mQBFwcO6Ee-HALqHB_QHoA" type="5007"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_mQBFwsO6Ee-HALqHB_QHoA" type="7003"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_mQBFw8O6Ee-HALqHB_QHoA" type="7009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_mQBs0MO6Ee-HALqHB_QHoA" type="7004">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_mQBs0cO6Ee-HALqHB_QHoA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_mQBs0sO6Ee-HALqHB_QHoA"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_mQBs08O6Ee-HALqHB_QHoA" type="5009">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_mQBs1MO6Ee-HALqHB_QHoA"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_mQBs1cO6Ee-HALqHB_QHoA" type="7005">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_mQBs1sO6Ee-HALqHB_QHoA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_mQBs18O6Ee-HALqHB_QHoA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_mQBs2MO6Ee-HALqHB_QHoA" type="7007"/>
+    <element xmi:type="map:Datastore" href="resource.map#_mPm2EMO6Ee-HALqHB_QHoA?fileId=_zVoqcMO1Ee-HALqHB_QHoA$type=map?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mQAescO6Ee-HALqHB_QHoA" x="706" y="206"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_zYKaAcO1Ee-HALqHB_QHoA"/>
+  <element xmi:type="map:Map" href="resource.map#_zVoqcMO1Ee-HALqHB_QHoA?fileId=_zVoqcMO1Ee-HALqHB_QHoA$type=map$name=LOAD_DWH_COMPTE?"/>
+  <edges xmi:type="notation:Edge" xmi:id="_0jsHEMO3Ee-HALqHB_QHoA" type="joinLink" source="_0jocsMO3Ee-HALqHB_QHoA" target="_z8yxEMO1Ee-HALqHB_QHoA">
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0jsHEcO3Ee-HALqHB_QHoA" points="[-1, -1, -196, -251]$[136, 175, -59, -75]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_0jsuIMO3Ee-HALqHB_QHoA" type="joinLink" source="_0jocsMO3Ee-HALqHB_QHoA" target="_yXc5AMO3Ee-HALqHB_QHoA">
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0jsuIcO3Ee-HALqHB_QHoA" points="[-1, -1, -451, -437]$[396, 385, -54, -51]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_1WQMcMO3Ee-HALqHB_QHoA" type="joinLink" source="_1WNJIMO3Ee-HALqHB_QHoA" target="_z8yxEMO1Ee-HALqHB_QHoA">
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_1WQMccO3Ee-HALqHB_QHoA" points="[-1, -1, -196, -251]$[136, 175, -59, -75]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_1WQzgMO3Ee-HALqHB_QHoA" type="joinLink" source="_1WNJIMO3Ee-HALqHB_QHoA" target="_v_ZcgMO3Ee-HALqHB_QHoA">
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_1WQzgcO3Ee-HALqHB_QHoA" points="[-1, -1, -477, -147]$[391, 120, -85, -26]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_m8XOYMO6Ee-HALqHB_QHoA" type="targetLink" source="_mQAesMO6Ee-HALqHB_QHoA" target="_z8yxEMO1Ee-HALqHB_QHoA">
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_m8XOYcO6Ee-HALqHB_QHoA" points="[-88, -5, 511, 26]$[-511, -26, 88, 5]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_m8YcgMO6Ee-HALqHB_QHoA" type="targetDataSetLink" source="_mQAesMO6Ee-HALqHB_QHoA" target="_mQAesMO6Ee-HALqHB_QHoA">
+    <element xmi:type="map:DataSet" href="resource.map#_z8ufoMO1Ee-HALqHB_QHoA?fileId=_zVoqcMO1Ee-HALqHB_QHoA$type=map?"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_m8YcgcO6Ee-HALqHB_QHoA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_m8YcgsO6Ee-HALqHB_QHoA" type="targetSetLink" source="_mQAesMO6Ee-HALqHB_QHoA" target="_mQAesMO6Ee-HALqHB_QHoA">
+    <element xmi:type="map:SetDescriptor" href="resource.map#_m70b0MO6Ee-HALqHB_QHoA?fileId=_zVoqcMO1Ee-HALqHB_QHoA$type=map?"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_m8Ycg8O6Ee-HALqHB_QHoA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_oJo50MO6Ee-HALqHB_QHoA" type="targetLink" source="_mQAesMO6Ee-HALqHB_QHoA" target="_v_ZcgMO3Ee-HALqHB_QHoA">
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oJo50cO6Ee-HALqHB_QHoA" points="[-184, -60, 230, 75]$[-329, -107, 85, 28]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_omIBgMO6Ee-HALqHB_QHoA" type="targetLink" source="_mQAesMO6Ee-HALqHB_QHoA" target="_yXc5AMO3Ee-HALqHB_QHoA">
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_omIBgcO6Ee-HALqHB_QHoA" points="[-184, 65, 256, -90]$[-355, 125, 85, -30]"/>
+  </edges>
+</notation:Diagram>
+]]></diagram>
+</map:map>

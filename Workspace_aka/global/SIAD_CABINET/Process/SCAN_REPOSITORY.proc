@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proc:process xmlns:proc="http://www.example.org/proc" id="e4a81bc1-367d-4959-b3cc-f7077c6786af">
+  <parameter id="76395ba8-e8c4-40c6-bd1d-8413083d61bd" name="source" type="String" value="C:\source"/>
+  <actionCode id="4c985767-ccb0-4b7b-9feb-a343cf373d29" isBeginAction="false" name="Copy 1of FileWait" nbCycles="-1" toleratedError="false" technology="com.indy.engine.actionCodes.FileWaitActionCodeI">
+    <link id="6400106a-72f1-4af3-9ea9-50828adef216" executionType="OK" generationType="OK_KO" mandatory="1" targetId="e693123e-6623-400b-9a99-19019754739a"/>
+    <metaDataLink id="fa30d567-8406-40a3-8fe4-1bc8eb0ecac9" name="CSG1_ORA4" target="resource.md#_FrPbELfJEe-iaoMtKSubDA?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=CSG1_ORA4?"/>
+    <parameter id="4fbaa229-5f24-48bb-b2de-7e5a2bea018b" name="WAIT_FILE_INCLUDES" type="String" value="*.txt"/>
+    <parameter id="fdbbf574-1bc7-4081-ba00-2be8c83b48af" name="WAIT_FILE_NB_FILES" type="Integer" value="-1"/>
+    <parameter id="8d006f1f-01ff-497f-b6dc-07de613111ce" name="WAIT_FILE_DIR" type="String" value="${~/source}$"/>
+    <parameter id="036e47e7-4863-44b6-b3df-b907e5923877" name="WAIT_FILE_TIMEOUT" type="Integer" value="100"/>
+  </actionCode>
+  <actionCode id="30077c5b-f042-449c-875e-b433c8fea274" isBeginAction="false" name="Copy 1of Start Delivery" nbCycles="-1" toleratedError="false" technology="com.indy.engine.actionCodes.ExecDeliveryActionCodeI">
+    <parameter id="d92f5c38-e9ce-4971-aa39-ff59cd15bd2c" name="DELIV_NAME" type="String" value="LOAD_TABLE"/>
+    <parameter id="97db3429-a4b9-439f-a5f4-c072d7cf5743" name="DELIV_SESSION_NAME" type="String" value="LOAD_TABLE_:{file_name}:"/>
+    <parameter id="545ab742-5a73-469a-a68d-6ff9d0c4864b" name="INTEGRATED_FILE" type="String" value=":{file_name}:"/>
+    <parameter id="e853eff0-0e1b-4573-9588-96e4544066f8" name="file_name" type="String" value=":{file_name}:"/>
+  </actionCode>
+  <actionCode id="192a8e9d-288b-45ea-9d7e-980195627721" isBeginAction="false" name="Copy 1of DELETE IND_SESSION" nbCycles="-1" toleratedError="false" technology="com.indy.engine.actionCodes.JdbcActionCodeI">
+    <link id="df950835-00bc-4b21-b60e-2dc05dfb6bde" executionType="OK" generationType="OK_KO" mandatory="1" targetId="4c985767-ccb0-4b7b-9feb-a343cf373d29"/>
+    <metaDataLink id="2df8bf0a-fcad-4ae2-b91e-5a3bbbc73c75" name="IND_SESSION_FILE_OP_LST" target="resource.md#_VXT_LsVJEe-gzK1_i2VR3A?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=IND_SESSION_FILE_OP_LST?"/>
+    <parameter id="bf3cd6fb-f0c8-4dbe-9999-25491622aedd" name="SQL_CONNECTION" type="String"/>
+    <parameter id="a1d29162-848d-4ba7-81c4-2852fceebd21" name="SQL_ACTION_TYPE" type="String" value="DDL_DML"/>
+    <code> DELETE from CSG1_ORA4.IND_SESSION_FILE_OP_LST</code>
+  </actionCode>
+  <actionCode id="e693123e-6623-400b-9a99-19019754739a" isBeginAction="false" name="Copy 1of SELECT ON IND_SESSION" nbCycles="-1" toleratedError="false" technology="com.indy.engine.actionCodes.JdbcActionCodeI">
+    <bindLink id="435fd27f-ee0d-4853-8c84-a8221ba2fbd0" bindType="DirectBind" targetId="30077c5b-f042-449c-875e-b433c8fea274"/>
+    <metaDataLink id="58a9780a-2653-4a6f-b91d-f2b085ac1743" name="IND_SESSION_FILE_OP_LST" target="resource.md#_VXT_LsVJEe-gzK1_i2VR3A?fileId=_FZzs0LfJEe-iaoMtKSubDA$type=md$name=IND_SESSION_FILE_OP_LST?"/>
+    <parameter id="29ffff86-f758-4467-add2-6b0c2a78ce52" name="SQL_CONNECTION" type="String"/>
+    <parameter id="7243b245-46a2-4843-b21f-7af916bfe8b6" name="SQL_ACTION_TYPE" type="String" value="SELECT"/>
+    <code>select file_name,TO_DATE(SUBSTR(file_name, INSTR(file_name, '_', 1, 2) + 1, 8), 'YYYYMMDD')  &#xD;
+from CSG1_ORA4.IND_SESSION_FILE_OP_LST&#xD;
+order by TO_DATE(SUBSTR(file_name, INSTR(file_name, '_', 1, 2) + 1, 8), 'YYYYMMDD')</code>
+  </actionCode>
+  <diagram><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xmlns:proc="http://www.example.org/proc" xsi:schemaLocation="http://www.eclipse.org/gmf/runtime/1.0.1/notation http://www.eclipse.org/gmf/runtime/1.0.3/notation#/?fileId=e4a81bc1-367d-4959-b3cc-f7077c6786af?" xmi:id="_NIAr8MeeEe-lu90_xx3znQ" type="Proc" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_OaEwwMeeEe-lu90_xx3znQ" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_OaFX0MeeEe-lu90_xx3znQ" type="5001"/>
+    <children xmi:type="notation:Node" xmi:id="_OaFX0ceeEe-lu90_xx3znQ" type="7001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_OaFX0seeEe-lu90_xx3znQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_OaFX08eeEe-lu90_xx3znQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_OaFX1MeeEe-lu90_xx3znQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_OaGl8MeeEe-lu90_xx3znQ" type="7002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_OaGl8ceeEe-lu90_xx3znQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_OaGl8seeEe-lu90_xx3znQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_OaGl88eeEe-lu90_xx3znQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_OaEwwceeEe-lu90_xx3znQ" fontName="Segoe UI"/>
+    <element xmi:type="proc:ActionCode" href="resource.proc#4c985767-ccb0-4b7b-9feb-a343cf373d29?fileId=e4a81bc1-367d-4959-b3cc-f7077c6786af$type=proc$name=Copy%201of%20FileWait?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OaEwwseeEe-lu90_xx3znQ" x="542" y="250"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_OaGl9MeeEe-lu90_xx3znQ" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_OaHNAMeeEe-lu90_xx3znQ" type="5001"/>
+    <children xmi:type="notation:Node" xmi:id="_OaHNAceeEe-lu90_xx3znQ" type="7001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_OaHNAseeEe-lu90_xx3znQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_OaHNA8eeEe-lu90_xx3znQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_OaHNBMeeEe-lu90_xx3znQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_OaHNBceeEe-lu90_xx3znQ" type="7002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_OaHNBseeEe-lu90_xx3znQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_OaHNB8eeEe-lu90_xx3znQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_OaHNCMeeEe-lu90_xx3znQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_OaGl9ceeEe-lu90_xx3znQ" fontName="Segoe UI"/>
+    <element xmi:type="proc:ActionCode" href="resource.proc#30077c5b-f042-449c-875e-b433c8fea274?fileId=e4a81bc1-367d-4959-b3cc-f7077c6786af$type=proc$name=Copy%201of%20Start%20Delivery?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OaGl9seeEe-lu90_xx3znQ" x="682" y="710"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_OaHNCceeEe-lu90_xx3znQ" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_OaHNDMeeEe-lu90_xx3znQ" type="5001"/>
+    <children xmi:type="notation:Node" xmi:id="_OaHNDceeEe-lu90_xx3znQ" type="7001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_OaHNDseeEe-lu90_xx3znQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_OaHND8eeEe-lu90_xx3znQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_OaHNEMeeEe-lu90_xx3znQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_OaH0EMeeEe-lu90_xx3znQ" type="7002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_OaH0EceeEe-lu90_xx3znQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_OaH0EseeEe-lu90_xx3znQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_OaH0E8eeEe-lu90_xx3znQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_OaHNCseeEe-lu90_xx3znQ" fontName="Segoe UI"/>
+    <element xmi:type="proc:ActionCode" href="resource.proc#192a8e9d-288b-45ea-9d7e-980195627721?fileId=e4a81bc1-367d-4959-b3cc-f7077c6786af$type=proc$name=Copy%201of%20DELETE%20IND_SESSION?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OaHNC8eeEe-lu90_xx3znQ" x="496" y="75"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_OaH0FMeeEe-lu90_xx3znQ" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_OaH0F8eeEe-lu90_xx3znQ" type="5001"/>
+    <children xmi:type="notation:Node" xmi:id="_OaH0GMeeEe-lu90_xx3znQ" type="7001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_OaH0GceeEe-lu90_xx3znQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_OaH0GseeEe-lu90_xx3znQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_OaH0G8eeEe-lu90_xx3znQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_OaH0HMeeEe-lu90_xx3znQ" type="7002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_OaH0HceeEe-lu90_xx3znQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_OaH0HseeEe-lu90_xx3znQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_OaH0H8eeEe-lu90_xx3znQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_OaH0FceeEe-lu90_xx3znQ" fontName="Segoe UI"/>
+    <element xmi:type="proc:ActionCode" href="resource.proc#e693123e-6623-400b-9a99-19019754739a?fileId=e4a81bc1-367d-4959-b3cc-f7077c6786af$type=proc$name=Copy%201of%20SELECT%20ON%20IND_SESSION?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OaH0FseeEe-lu90_xx3znQ" x="602" y="470"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_OaH0IMeeEe-lu90_xx3znQ" type="2005">
+    <children xmi:type="notation:Node" xmi:id="_OaIbIMeeEe-lu90_xx3znQ" type="5005"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_OaH0IceeEe-lu90_xx3znQ" fontName="Segoe UI"/>
+    <element xmi:type="proc:Parameter" href="resource.proc#76395ba8-e8c4-40c6-bd1d-8413083d61bd?fileId=e4a81bc1-367d-4959-b3cc-f7077c6786af$type=proc$name=source?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OaH0IseeEe-lu90_xx3znQ" x="1056" y="85"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_NIAr8ceeEe-lu90_xx3znQ"/>
+  <element xmi:type="proc:ActionProcess" href="resource.proc#e4a81bc1-367d-4959-b3cc-f7077c6786af?fileId=e4a81bc1-367d-4959-b3cc-f7077c6786af$type=proc$name=SCAN_REPOSITORY?"/>
+  <edges xmi:type="notation:Edge" xmi:id="_OaPI0MeeEe-lu90_xx3znQ" type="4001" source="_OaEwwMeeEe-lu90_xx3znQ" target="_OaH0FMeeEe-lu90_xx3znQ">
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_OaPI0ceeEe-lu90_xx3znQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_OaPI0seeEe-lu90_xx3znQ" fontName="Segoe UI"/>
+    <element xmi:type="proc:Link" href="resource.proc#6400106a-72f1-4af3-9ea9-50828adef216?fileId=e4a81bc1-367d-4959-b3cc-f7077c6786af$type=proc?"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OaPI08eeEe-lu90_xx3znQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_OaPv4MeeEe-lu90_xx3znQ" type="4001" source="_OaHNCceeEe-lu90_xx3znQ" target="_OaEwwMeeEe-lu90_xx3znQ">
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_OaPv4ceeEe-lu90_xx3znQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_OaPv4seeEe-lu90_xx3znQ" fontName="Segoe UI"/>
+    <element xmi:type="proc:Link" href="resource.proc#df950835-00bc-4b21-b60e-2dc05dfb6bde?fileId=e4a81bc1-367d-4959-b3cc-f7077c6786af$type=proc?"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OaPv48eeEe-lu90_xx3znQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_OaUoYMeeEe-lu90_xx3znQ" type="4002" source="_OaH0FMeeEe-lu90_xx3znQ" target="_OaGl9MeeEe-lu90_xx3znQ">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_OaUoYceeEe-lu90_xx3znQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_OaUoYseeEe-lu90_xx3znQ" fontName="Segoe UI"/>
+    <element xmi:type="proc:BindLink" href="resource.proc#435fd27f-ee0d-4853-8c84-a8221ba2fbd0?fileId=e4a81bc1-367d-4959-b3cc-f7077c6786af$type=proc?"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OaUoY8eeEe-lu90_xx3znQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+</notation:Diagram>
+]]></diagram>
+</proc:process>
